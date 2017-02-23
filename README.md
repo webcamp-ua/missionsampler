@@ -48,6 +48,9 @@ Define styles in the respective `scss` file.
   color: #dd1842 !important;
 }
 ```
+
+![screenshot](Mission_sampler.png)
+
 ---
 ### To run in dev mode:
  
