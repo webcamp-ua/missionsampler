@@ -3,8 +3,12 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const multi = require('multi-loader');
+const extractTextPlugin = new ExtractTextPlugin('style.css', {allChunks: true});
+const extractTextPluginBlack = new ExtractTextPlugin('style-black.css', {allChunks: true});
 
-var extractTextPlugin = new ExtractTextPlugin('style.css', {allChunks: true});
+const theme = '@import"' + path.resolve(__dirname, 'theme/_theme.scss') + '";';
+
 module.exports = {
     context: __dirname,
     devtool: 'inline-source-map',
@@ -34,7 +38,8 @@ module.exports = {
                 exclude: [/(node_modules)/, /react-css-themr/]
             }, {
                 test: /\.(scss|css)$/,
-                loader: extractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap')
+                loader: multi(extractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap'),
+                    extractTextPluginBlack.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?data=' + theme + '&sourceMap'))
             }
         ],
         preLoaders: [
@@ -45,6 +50,7 @@ module.exports = {
     postcss: [autoprefixer],
     plugins: [
         extractTextPlugin,
+        extractTextPluginBlack,
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({

@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import {AppBar, Layout, NavDrawer, Panel} from 'react-toolbox';
-import { List, ListItem} from 'react-toolbox/lib/list';
+import {List, ListItem} from 'react-toolbox/lib/list';
 import Dashboard from './Dashboard';
-
+import Switch from 'react-toolbox/lib/switch';
+const DAY_ID = 'theme-default';
+const NIGHT_ID = 'theme-black';
+const DISABLED = 'disabled';
 class AppLayout extends Component {
     state = {
         navActive: false,
-        dayTheme: true
+        dayTheme: false
     };
 
     render () {
@@ -14,6 +17,11 @@ class AppLayout extends Component {
             <div style={{height: '100vh'}}>
                 <AppBar title="Mission sampler" rightIcon="menu"
                         onRightIconClick={e=>this.setState({navActive:!this.state.navActive})}>
+                    <Switch
+                        checked={this.state.dayTheme}
+                        label="Day"
+                        onChange={()=>this.switchTheme()}
+                    />
                 </AppBar>
                 <Layout>
                     <NavDrawer active={this.state.navActive}>
@@ -40,6 +48,20 @@ class AppLayout extends Component {
                 </Layout>
             </div>
         );
+    }
+
+    switchTheme () {
+        this.setState({dayTheme: !this.state.dayTheme}, ()=> {
+            let day = document.getElementById(DAY_ID);
+            let night = document.getElementById(NIGHT_ID);
+            if (this.state.dayTheme) {
+                day.removeAttribute(DISABLED);
+                night.setAttribute(DISABLED, 'true');
+            }else{
+                night.removeAttribute(DISABLED);
+                day.setAttribute(DISABLED, 'true');
+            }
+        });
     }
 }
 
