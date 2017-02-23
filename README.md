@@ -33,6 +33,8 @@ SCSS
 }
 ```
 
+---
+
 ### To run in dev mode:
  
 ``` 
