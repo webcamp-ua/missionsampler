@@ -10,6 +10,7 @@ In this branch I've tried the option to add theme [using SASS imports and contex
 ---
 JavaScript
 
+Create new file `theme.js` and define an object with component keys and style file paths.
 ```
 //src/theme.js
 
@@ -17,7 +18,7 @@ export default {
     RTButton: require('./scss/button.scss')
 };
 ```
-
+Provide the `theme.js` as the `theme` property of the `ThemeProvider` component, that wraps your root component.
 ```
 //src/index.js
 
@@ -37,6 +38,8 @@ ReactDOM.render(
 ---
 SCSS
 
+Define styles in the respective `scss` file.
+
 ```
 //src/scss/button.scss
 
@@ -45,7 +48,7 @@ SCSS
   color: #dd1842 !important;
 }
 ```
-
+---
 ### To run in dev mode:
  
 ``` 
