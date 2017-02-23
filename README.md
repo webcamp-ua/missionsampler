@@ -7,6 +7,9 @@ This project is a sample for demonstration of [react](https://facebook.github.io
 
 In this branch I've tried the option to add theme [using SASS imports and props](https://github.com/react-toolbox/react-toolbox/tree/master#using-sass-imports-and-props). In particular in 'ThemedButton' component.
 
+---
+JavaScript
+
 ```javascript
 import React from 'react';
 import { Button } from 'react-toolbox/lib/button/Button';
@@ -18,6 +21,9 @@ const ThemedButton = (props) => (
 
 export default ThemedButton;
 ```
+
+---
+SCSS
 
 ```scss
 @import "~react-toolbox/lib/button/theme";
