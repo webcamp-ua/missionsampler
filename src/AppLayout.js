@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppBar, Layout, NavDrawer, Panel} from 'react-toolbox';
+import {AppBar, Layout, NavDrawer, Panel, Button} from 'react-toolbox';
 import { List, ListItem} from 'react-toolbox/lib/list';
 import Dashboard from './Dashboard';
 

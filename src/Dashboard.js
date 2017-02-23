@@ -2,7 +2,7 @@ import React from 'react';
 import {Card, CardTitle, CardActions} from 'react-toolbox/lib/card';
 import {Button} from 'react-toolbox/lib/button';
 import { List, ListItem} from 'react-toolbox/lib/list';
-
+import ThemedButton from './themed-button/ThemedButton';
 const Dashboard = () => (
     <div style={{display:'flex'}}>
         <Card style={{width: '50%', marginRight:'1rem'}}>
@@ -28,7 +28,7 @@ const Dashboard = () => (
                 />
             </List>
             <CardActions>
-                <Button label="Action 1"/>
+                <ThemedButton label="Action 1"/>
                 <Button label="Action 2"/>
             </CardActions>
         </Card>
@@ -49,7 +49,6 @@ const Dashboard = () => (
                 />
             </List>
             <CardActions>
-                <Button label="Action 1"/>
                 <Button label="Action 2"/>
             </CardActions>
         </Card>
