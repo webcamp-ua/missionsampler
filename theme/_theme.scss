@@ -1,0 +1,120 @@
+@import "~react-toolbox/lib/colors";
+@import "~react-toolbox/lib/globals";
+
+$black-two: #191917;
+$black: #2a2925;
+$bluegrey: #6c8b9b;
+$charcoal-grey: #334147;
+$cool-grey: #929ca1;
+$navy: #00253e;
+
+//Basic palette
+$color-accent: #FB4554;
+$color-primary: $black-two;
+$color-primary-dark: darken($color-primary, 10%);
+$color-primary-contrast: $cool-grey;
+$body-bg: $color-black;
+$body-text-color: $color-white;
+
+//Text
+$color-text: $color-white;
+$color-text-secondary: rgba($color-white, 0.8);
+//Input
+$input-text-bottom-border-color: rgba($color-white, 0.2);
+$input-text-label-color: $cool-grey;
+$input-group-bg: $charcoal-grey;
+$input-text-highlight-color: $color-white;
+$switch-color: $bluegrey;
+$switch-track-on-color: $charcoal-grey;
+
+/**
+* BUTTONS
+*/
+$button-neutral-color-contrast: $bluegrey;
+$button-neutral-color-hover: rgba($color-white, .2);
+$button-neutral-color: $color-white;
+$button-primary-color: $color-white;
+$button-primary-color-contrast: $color-primary;
+$button-primary-color-hover: rgba($button-primary-color, .2);
+
+/**
+* CARDS
+*/
+$card-background-color: $navy;
+$card-title_btns_color: $bluegrey;
+//Date / time pickers
+$datepicker-primary: $color-white;
+//$datepicker-primary-contrast: $color-primary-contrast
+//$datepicker-primary-dark: $color-primary-dark
+//$datepicker-primary-color: $datepicker-primary;
+//$datepicker-primary-hover-color: rgba($datepicker-primary, .2)
+//$datepicker-primary-contrast-color: $datepicker-primary-contrast
+//$datepicker-primary-dark-color: $datepicker-primary-dark
+$timepicker-primary: $color-white;
+//$timepicker-primary-contrast: $color-primary-contrast;
+//$timepicker-primary-dark: $color-primary-dark;
+//$timepicker-primary-color: $timepicker-primary;
+//$timepicker-primary-hover-color: rgba($timepicker-primary, .2);
+//$timepicker-primary-contrast-color: $timepicker-primary-contrast;
+//$timepicker-primary-dark-color: $timepicker-primary-dark;
+$clock-primary: $charcoal-grey;
+//$clock-primary-contrast: $color-primary-contrast
+//$clock-primary-dark: $color-primary-dark
+//$clock-primary-color: $clock-primary
+//$clock-primary-hover-color: rgba($clock-primary, .2)
+//$clock-primary-contrast-color: $clock-primary-contrast
+//$clock-primary-dark-color: $clock-primary-dark
+
+/**
+* DROPDOWNS
+*/
+$dropdown-color-white: $navy;
+$dropdown-color-primary: $bluegrey;
+$dropdown-color-primary-contrast: $color-primary-contrast;
+$dropdown-value-hover-background: rgba($color-white, .2);
+
+/**
+* LAYOUT
+*/
+$appbar-color: $navy;
+$appbar-contrast: $color-white;
+$bottomsheet-background-color: $palette-grey-900;
+$drawer-background-color: $navy;
+$drawer-border-color: $color-black;
+$mission_bar-bg: $black;
+$panel-bg: $color-black;
+$color-divider: darken($body-bg, 10%);
+$snackbar-background-color: $palette-grey-900;
+$vg-side-navigation-bg: $navy;
+
+/**
+* Menu
+*/
+$menu-background-color: $navy;
+$menu-item-hover-background: rgba($color-white, .2);
+//$menu-item-selected-background: transparent;
+//Lists
+$list-item-hover-color: rgba($color-white, .2);
+
+//Chat
+$message_bg: $bluegrey;
+$message_text: $color-text;
+$message_time: $color-text-secondary;
+$my_message_bg: $cool-grey;
+$name_color: $color-black;
+
+/**
+* DIALOG
+*/
+$dialog-color-white: $navy;
+$dialog-color-title: $color-text;
+//Table
+$table-text-color: $color-text-secondary;
+$table-row-highlight: $list-item-hover-color;
+//$default-bg: #505B76;
+//$color-dark-contrast: $color-white;
+//$color-light-contrast: $color-black;
+//$color-accent: #FDAC46;
+//$color-accent-dark: darken($color-accent, 10%);
+//$color-primary-contrast: $color-dark-contrast;
+//$color-accent-contrast: $color-dark-contrast;

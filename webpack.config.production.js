@@ -32,6 +32,9 @@ module.exports = {
             }
         ]
     },
+    sassLoader: {
+        data: '@import "' + path.resolve(__dirname, 'theme/_theme.scss') + '";'
+    },
     postcss: [autoprefixer],
     plugins: [
         extractTextPlugin,

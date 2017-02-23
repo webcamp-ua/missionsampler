@@ -1,11 +1,30 @@
 @import "~normalize.css";
 
-html{
+$body-bg: rgba(255, 255, 255, 0) !default;
+$scrollbar-thumb-color: rgba(0, 0, 0, .5);
+$body-text-color: inherit !default;
+$vg-side-navigation-bg: #4e4e4e !default;
+$scroll-width: 5px;
+html {
   font-size: 10px;
 }
 
 body {
   font-family: Roboto, sans-serif;
+  background: $body-bg;
+  color: $body-text-color;
+  & *::-webkit-scrollbar {
+    background: inherit;
+    width: $scroll-width;
+  }
+  & *::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-color; // rgba(0,0,0,.5);
+  }
+  & textarea::-webkit-scrollbar,
+  textarea::-webkit-scrollbar-thumb {
+    background: transparent;
+    width: 1px;
+  }
 }
 
 a, abbr, address, article, aside, audio, b, blockquote, body, caption, cite, code, dd, del, dfn, dialog, div, dl, dt, em, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
